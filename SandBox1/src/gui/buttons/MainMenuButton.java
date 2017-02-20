@@ -1,9 +1,5 @@
 package gui.buttons;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-
 import javax.swing.JButton;
 
 public class MainMenuButton extends JButton {
@@ -13,5 +9,6 @@ public class MainMenuButton extends JButton {
 	public MainMenuButton(String text) {
 		setText(text);
 		setSize(50, 20);
+		
 	}
 }
