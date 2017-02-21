@@ -2,27 +2,56 @@ package gui.buttons;
 
 import gui.dialogbox.Play;
 
+import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 
-public class LevelMenuButton extends JButton implements ActionListener {
+public class LevelMenuButton extends JButton implements MouseListener {
 
 	private static final long serialVersionUID = 1L;
 
 	public LevelMenuButton(Integer levelNumber) {
 		setText(levelNumber.toString());
 		setSize(new Dimension(50, 50));
-		setMargin(new Insets(10,10,10,10));
-		addActionListener(this);
+		addMouseListener(this);
+		makeStyle();
+	}
+	
+	private void makeStyle() {
+		Color[] gradients;
+		Graphics2D graph2;
+	}
+
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		Play play = new Play((Integer.parseInt(((JButton) e.getSource()).getText())));
+		play.launch();
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		Play play = new Play((Integer.parseInt(((JButton) e.getSource()).getText())));
-		play.launch();
+	public void mousePressed(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

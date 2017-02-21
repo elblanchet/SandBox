@@ -9,6 +9,6 @@ public class MainMenuButton extends JButton {
 	public MainMenuButton(String text) {
 		setText(text);
 		setSize(50, 20);
-		
+		setIconTextGap(SOUTH_EAST);
 	}
 }
